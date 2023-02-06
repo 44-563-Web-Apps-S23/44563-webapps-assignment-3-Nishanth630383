@@ -50,5 +50,25 @@
             <td>15</td>
         </tr>
     </table>
+    <hr>
+    <h2>Code</h2>
+    <blockquote cite="https://stackoverflow.com/questions/9229645/remove-duplicate-values-from-js-array">Remove duplicate values from JS array</blockquote>
+    <a href="https://stackoverflow.com/questions/9229645/remove-duplicate-values-from-js-array">stackoverflow Link</a>
+    <pre>
+        const array = [1, 1, 1, 3, 3, 2, 2];
+
+        // Method 1: Using a Set
+        const unique = [...new Set(array)];
+
+        // Method 2: Array.prototype.reduce
+        const unique = array.reduce((result, element) => {
+        return result.includes(element) ? result : [...result, element];
+        }, []);
+
+        // Method 3: Array.prototype.filter
+        const unique = array.filter((element, index) => {
+        return array.indexOf(element) === index;
+        });
+    </pre>
 </body>
 </html>
